@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <!-- heada 就是自定义的可替换标记  -->
+  {% block heada %}
+    <!-- title 就是自定义的可替换标记  -->
+    <title>{% block title %}{% endblock %}</title>
+  {% endblock %}
+  <style>
+    * { margin: 0; padding: 0; }
+  </style>
+</head>
+<body>
+
+<header style="height: 100px;width: 100%;background: cadetblue">
+  这是网页头部
+</header>
+
+<div>
+  <!-- content 是自定义的可替换标记  -->
+  {% block content %}
+  {% endblock %}
+</div>
+
+<footer style="position: absolute;bottom: 0; height: 100px; width: 100%; background: #ccc">
+  这是网页底部
+</footer>
+
+</body>
+</html>

@@ -1,22 +1,16 @@
-from flask import make_response, render_template, jsonify
+"""
+返回各种数据的示例
+"""
+
+from flask import Blueprint, make_response, render_template, jsonify
 from model.user import User
-from core.application import app
-from router.api_blueprint import api
 
 
-# 注册蓝图，使用url前缀（不影响正常的路由）
-app.register_blueprint(api, url_prefix='/api')
+# 实例化蓝图，参数：蓝图名称，导入名称
+custom_data = Blueprint('custom_data', __name__)
 
 
-@app.route('/')
-def hello():
-    """
-    基础路由
-    """
-    return 'Hello World'
-
-
-@app.route('/data')
+@custom_data.route('/')
 def json_data():
     """
     返回JSON格式的数据
@@ -26,7 +20,7 @@ def json_data():
     return response
 
 
-@app.route('/users')
+@custom_data.route('/users')
 def user_info():
     """
     数据库原生查询

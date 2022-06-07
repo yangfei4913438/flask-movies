@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ef14e1bab97e4e684b8f98a29c294c68a6589cae562d501a76b76eab5fe0c1c6"
+            "sha256": "ad9d7525261529e008508074198b5076fe03ee4b0d8e58184e8a87c6bde64a87"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -31,6 +31,14 @@
             ],
             "index": "tsinghua",
             "version": "==2.1.2"
+        },
+        "flask-sqlacodegen": {
+            "hashes": [
+                "sha256:8cf05501f33703cc52279e98973a52d7ae475e16ef28c17fcdf99ac9b8db61fb",
+                "sha256:9e470725713c48da9c9cb2724c959bcdb862cdaadcf72f80ab4475e40527ccc8"
+            ],
+            "index": "tsinghua",
+            "version": "==1.1.8"
         },
         "flask-sqlalchemy": {
             "hashes": [
@@ -100,6 +108,14 @@
             ],
             "markers": "python_version >= '3' and platform_machine == 'aarch64' or (platform_machine == 'ppc64le' or (platform_machine == 'x86_64' or (platform_machine == 'amd64' or (platform_machine == 'AMD64' or (platform_machine == 'win32' or platform_machine == 'WIN32')))))",
             "version": "==1.1.2"
+        },
+        "inflect": {
+            "hashes": [
+                "sha256:967d6db69932bac9f1977b8f2dd131a59147f4b56134cfc74a3f44e5adb65223",
+                "sha256:a0612e7bba1028bb7efa121bf8f012aeda9355252d01b257057fa2a8f5859cef"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==5.6.0"
         },
         "itsdangerous": {
             "hashes": [

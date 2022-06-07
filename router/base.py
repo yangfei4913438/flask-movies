@@ -1,6 +1,5 @@
 from flask import make_response, render_template, jsonify
-from sqlalchemy import text
-from core.database import db
+from model.user import User
 from core.application import app
 from router.api_blueprint import api
 
@@ -32,11 +31,9 @@ def user_info():
     """
     数据库原生查询
     """
-    # 构建查询语句
-    sql = text(f'select Host, User from user')
 
     # 查询的结果，每行一个元组返回一个列表
-    users = db.engine.execute(sql)
+    users = User.query.all()
 
     # 渲染模板
     return render_template('users.html', users=users)

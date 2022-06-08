@@ -12,7 +12,7 @@ app = Flask(__name__, template_folder='templates')
 
 
 # 加载配置（必须在生成数据库变量之前定义 export "ops_config"=local ）
-# ops_config 是环境变量值 local ｜ production
+# ops_config 是环境变量值 local ｜ prod
 if "ops_config" in environ:
     # 获取环境变量
     env_key = environ.get('ops_config')

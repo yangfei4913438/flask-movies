@@ -1,7 +1,7 @@
 from application import app
-from blueprint.base import custom_base
-from blueprint.api import custom_api
-from blueprint.data import custom_data
+from controller.blueprint.base import custom_base
+from controller.blueprint.api import custom_api
+from controller.blueprint.data import custom_data
 
 
 # 注册蓝图

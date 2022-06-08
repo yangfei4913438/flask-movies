@@ -1,0 +1,15 @@
+{% extends "common/layout.html" %}
+
+# 替换title部分的内容
+{% block title %} 404 {% endblock %}
+
+# 替换 heada 的内容
+{% block heada %}
+  <!-- 用于继承原有的信息-->
+  {{  super()  }}
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+{% endblock %}
+
+{% block content %}
+  <h4 style="margin: 8px 0">没有找到指定的页面</h4>
+{% endblock %}

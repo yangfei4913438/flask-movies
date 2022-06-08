@@ -11,8 +11,15 @@ host = '127.0.0.1'
 port = '3306'
 database = 'mysql'
 
-# 启用调试()
+
+# 运行环境
+ENV = 'development'  # production
+
+# 启用调试
 DEBUG = True
+
+# flask_debugtoolbar 需要的key(随机打一串字符)
+SECRET_KEY = 'dshabjdhsbahjdhwgqyw'
 
 # 连接数据库配置
 SQLALCHEMY_DATABASE_URI = f"mysql://{username}:{password}@{host}:{port}/{database}"

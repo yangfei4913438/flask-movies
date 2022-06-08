@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "ad9d7525261529e008508074198b5076fe03ee4b0d8e58184e8a87c6bde64a87"
+            "sha256": "fd1376e0d69243c602e5931f08e132a4b55e86e417ecf87bf8af43fec49213a6"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,12 @@
         ]
     },
     "default": {
+        "blinker": {
+            "hashes": [
+                "sha256:471aee25f3992bd325afa3772f1063dbdbbca947a041b8b89466dc00d606f8b6"
+            ],
+            "version": "==1.4"
+        },
         "click": {
             "hashes": [
                 "sha256:7682dc8afb30297001674575ea00d1814d808d6a36af415a82bd481d37ba7b8e",
@@ -31,6 +37,14 @@
             ],
             "index": "tsinghua",
             "version": "==2.1.2"
+        },
+        "flask-debugtoolbar": {
+            "hashes": [
+                "sha256:0c26aa013a9813b8886857bf0ec24d28ab494114a264baf06c951cadc4dd0dae",
+                "sha256:491c737f321830c06a2835784acf1fc8488fd257a0ef318810b3b6bed5f600d5"
+            ],
+            "index": "tsinghua",
+            "version": "==0.13.1"
         },
         "flask-sqlacodegen": {
             "hashes": [

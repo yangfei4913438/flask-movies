@@ -11,6 +11,10 @@ host = '127.0.0.1'
 port = '3306'
 database = 'mysql'
 
+
+# 运行环境
+ENV = 'production'
+
 # 关闭调试
 DEBUG = False
 

@@ -1,8 +1,6 @@
 """
 开发环境配置
 """
-from urllib.parse import quote_plus
-from config.base_setting import *
 
 # 数据库链接信息
 username = 'yangfei'
@@ -11,6 +9,8 @@ host = '127.0.0.1'
 port = '3306'
 database = 'movie'
 
+# 當 flask 偵測到 template 有修改後，會自動去更新。
+TEMPLATED_AUTO_RELOAD = True
 
 # 运行环境
 ENV = 'development'  # production

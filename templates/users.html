@@ -3,18 +3,18 @@
 # 替换title部分的内容
 {% block title %} 数据库查询 {% endblock %}
 
-# 替换 heada 的内容
-{% block heada %}
-  <!-- 用于继承原有的信息-->
-  {{  super()  }}
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+# 替换 head 的内容
+{% block head %}
+    <!-- 用于继承原有的信息-->
+    {{ super() }}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 {% endblock %}
 
 {% block content %}
-  <h4 style="margin: 8px 0">这是 Flask 数据库查询页面</h4>
-  <ul>
-    {% for user in users %}
-      <li>{{user}}</li>
-    {% endfor %}
-  </ul>
+    <h4 style="margin: 8px 0">这是 Flask 数据库查询页面</h4>
+    <ul>
+        {% for user in users %}
+            <li>{{ user }}</li>
+        {% endfor %}
+    </ul>
 {% endblock %}

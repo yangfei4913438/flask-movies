@@ -3,13 +3,15 @@
 # 替换title部分的内容
 {% block title %} {{ title }} {% endblock %}
 
-# 替换 heada 的内容
-{% block heada %}
-  <!-- 用于继承原有的信息-->
-  {{  super()  }}
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+# 替换 head 的内容
+{% block head %}
+    <!-- 用于继承原有的信息-->
+    {{ super() }}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 {% endblock %}
 
 {% block content %}
-  <h4 style="margin: 8px 0">{{ welcome }}</h4>
+    <div class="h-full">
+        <h4 class="my-4">{{ welcome }}</h4>
+    </div>
 {% endblock %}

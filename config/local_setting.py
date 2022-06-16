@@ -18,6 +18,9 @@ ENV = 'development'  # production
 # 启用调试
 DEBUG = True
 
+# Can not compress the CSS/JS on Dev environment.
+ASSETS_DEBUG = True
+
 # flask_debugtoolbar 需要的key(随机打一串字符)
 SECRET_KEY = 'dshabjdhsbahjdhwgqyw'
 

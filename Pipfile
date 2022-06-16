@@ -9,6 +9,10 @@ flask-sqlalchemy = "*"
 mysqlclient = "*"
 flask-sqlacodegen = "*"
 flask-debugtoolbar = "*"
+pyscss = "*"
+flask-assets = "*"
+cssmin = "*"
+jsmin = "*"
 
 [dev-packages]
 

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "fd1376e0d69243c602e5931f08e132a4b55e86e417ecf87bf8af43fec49213a6"
+            "sha256": "41f2f57d11133dac81813ac16d4d51ab328bd608b0c5790ec477f3f153ed9d39"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -30,6 +30,13 @@
             "markers": "python_version >= '3.7'",
             "version": "==8.1.3"
         },
+        "cssmin": {
+            "hashes": [
+                "sha256:e012f0cc8401efcf2620332339011564738ae32be8c84b2e43ce8beaec1067b6"
+            ],
+            "index": "tsinghua",
+            "version": "==0.2.0"
+        },
         "flask": {
             "hashes": [
                 "sha256:315ded2ddf8a6281567edb27393010fe3406188bafbfe65a3339d5787d89e477",
@@ -37,6 +44,14 @@
             ],
             "index": "tsinghua",
             "version": "==2.1.2"
+        },
+        "flask-assets": {
+            "hashes": [
+                "sha256:1dfdea35e40744d46aada72831f7613d67bf38e8b20ccaaa9e91fdc37aa3b8c2",
+                "sha256:2845bd3b479be9db8556801e7ebc2746ce2d9edb4e7b64a1c786ecbfc1e5867b"
+            ],
+            "index": "tsinghua",
+            "version": "==2.0"
         },
         "flask-debugtoolbar": {
             "hashes": [
@@ -147,6 +162,13 @@
             "markers": "python_version >= '3.7'",
             "version": "==3.1.2"
         },
+        "jsmin": {
+            "hashes": [
+                "sha256:c0959a121ef94542e807a674142606f7e90214a2b3d1eb17300244bbb5cc2bfc"
+            ],
+            "index": "tsinghua",
+            "version": "==3.0.1"
+        },
         "markupsafe": {
             "hashes": [
                 "sha256:0212a68688482dc52b2d45013df70d169f542b7394fc744c02a57374a4207003",
@@ -204,6 +226,21 @@
             "index": "tsinghua",
             "version": "==2.1.0"
         },
+        "pyscss": {
+            "hashes": [
+                "sha256:8f35521ffe36afa8b34c7d6f3195088a7057c185c2b8f15ee459ab19748669ff"
+            ],
+            "index": "tsinghua",
+            "version": "==1.4.0"
+        },
+        "six": {
+            "hashes": [
+                "sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926",
+                "sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254"
+            ],
+            "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3'",
+            "version": "==1.16.0"
+        },
         "sqlalchemy": {
             "hashes": [
                 "sha256:06ec11a5e6a4b6428167d3ce33b5bd455c020c867dabe3e6951fa98836e0741d",
@@ -245,6 +282,13 @@
             ],
             "markers": "python_version >= '2.7' and python_version not in '3.0, 3.1, 3.2, 3.3, 3.4, 3.5'",
             "version": "==1.4.37"
+        },
+        "webassets": {
+            "hashes": [
+                "sha256:167132337677c8cedc9705090f6d48da3fb262c8e0b2773b29f3352f050181cd",
+                "sha256:a31a55147752ba1b3dc07dee0ad8c8efff274464e08bbdb88c1fd59ffd552724"
+            ],
+            "version": "==2.0"
         },
         "werkzeug": {
             "hashes": [

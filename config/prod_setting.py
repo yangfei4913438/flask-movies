@@ -2,7 +2,6 @@
 生产环境配置
 """
 from urllib.parse import quote_plus
-from config.base_setting import *
 
 # 数据库链接信息
 username = 'root'
@@ -10,7 +9,6 @@ password = quote_plus('Yf@111111')  # 处理密码中的特殊符号
 host = '127.0.0.1'
 port = '3306'
 database = 'mysql'
-
 
 # 运行环境
 ENV = 'production'

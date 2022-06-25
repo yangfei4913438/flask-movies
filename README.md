@@ -4,8 +4,6 @@
 
 - python 3.10
 - pipenv
-- nodejs
-- yarn
 
 #### 启动项目
 
@@ -15,10 +13,6 @@
 
 ```pipenv install```
 
-- 安装前端依赖包
+- 启动项目（声明一下运行模式）
 
-```yarn```
-
-- 启动项目
-
-```python start.py```
+```MODE=dev python start.py```

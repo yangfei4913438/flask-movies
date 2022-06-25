@@ -1,69 +1,73 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- head 就是自定义的可替换标记  -->
-    {% block head %}
-        <!-- title 就是自定义的可替换标记  -->
-        <title>{% block title %}{% endblock %}</title>
-    {% endblock %}
+	<!-- head 就是自定义的可替换标记  -->
+	{% block head %}
+	<!-- title 就是自定义的可替换标记  -->
+		<title>{% block title %}{% endblock %}</title>
+	{% endblock %}
 
-    {# scss文件 #}
-    {% assets "scss_all" %}
-        <link rel=stylesheet type=text/css href="{{ ASSET_URL }}">
-    {% endassets %}
+	{# scss文件 #}
+	{% assets "scss_all" %}
+		<link rel=stylesheet type=text/css href="{{ ASSET_URL }}">
+	{% endassets %}
 
-    {# 加载 css #}
-    <link rel="stylesheet" href="{{ url_for('static',filename='src/css/bootstrap.min.css') }}">
-    <link rel="stylesheet"
-          href="{{ url_for('static',filename='src/css/bootstrap-theme.min.css') }}">
+	{# 加载 css #}
+	<link rel="stylesheet" href="{{ url_for('static',filename='src/css/bootstrap.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='src/css/bootstrap-theme.min.css') }}">
 </head>
 <body>
 
 <nav class="navbar navbar-inverse" style="border-radius: 0">
-    <div class="container-fluid">
-        <!-- Brand and toggle get grouped for better mobile display -->
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
-                    data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="/">猫影</a>
-        </div>
+	<div class="container-fluid">
+		<!-- Brand and toggle get grouped for better mobile display -->
+		<div class="navbar-header">
+			<button type="button" class="navbar-toggle collapsed" data-toggle="collapse"
+			        data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+				<span class="sr-only">Toggle navigation</span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+				<span class="icon-bar"></span>
+			</button>
+			<a class="navbar-brand" href="{{ buildUrl('/') }}">猫影</a>
+		</div>
 
-        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="#">影视</a></li>
-            </ul>
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="/register">注册</a></li>
-                <li><a href="/login">登录</a></li>
-            </ul>
-        </div>
-    </div>
+		<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+			<ul class="nav navbar-nav">
+				<li class="active"><a href="{{ buildUrl('/#') }}">影视</a></li>
+			</ul>
+			<ul class="nav navbar-nav navbar-right">
+				<li><a href="{{ buildUrl('/register') }}">注册</a></li>
+				<li><a href="{{ buildUrl('/login') }}">登录</a></li>
+			</ul>
+		</div>
+	</div>
 </nav>
 
 <section class="container" style="min-height: 600px">
-    <!-- content 是自定义的可替换标记  -->
-    {% block content %}
-    {% endblock %}
+	<!-- content 是自定义的可替换标记  -->
+	{% block content %}
+	{% endblock %}
 </section>
 
 <footer class="text-center">
-    {% block footer %}
-    {% endblock %}
+	{% block footer %}
+	{% endblock %}
 
-    fei @2022 版权所有66
+	fei @2022 版权所有
 </footer>
 
-{% assets "js_all" %}
-    <script type="text/javascript" src="{{ ASSET_URL }}"></script>
-{% endassets %}
+{# 写在前面，模版里面就不用写继承了，因为jquery必须在最前面引入 #}
+<script type="text/javascript" src="{{ buildStaticUrl('/src/js/jquery-3.6.0.min.js') }}"></script>
+<script type="text/javascript" src="{{ buildStaticUrl('/src/js/jquery.validate.min.js') }}"></script>
+<script type="text/javascript" src="{{ buildStaticUrl('/src/js/bootstrap.min.js') }}"></script>
+
+{# 引入其他js #}
+{% block js %}
+{% endblock %}
 
 </body>
 </html>

@@ -6,4 +6,10 @@ from controller import app
 
 if __name__ == '__main__':
     # 只有开发环境才会运行这段代码，生产不用flask自带服务器来启动项目。
-    app.run('127.0.0.1', 8080)
+
+    # 获取变量
+    host = app.config.get('DEV_HOST')
+    port = app.config.get('DEV_PORT')
+
+    # 启动项目
+    app.run(host, port)

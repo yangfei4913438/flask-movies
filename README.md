@@ -16,3 +16,17 @@
 - 启动项目（声明一下运行模式）
 
 ```MODE=dev python start.py```
+
+#### 补充命令
+
+- 安装某个包
+
+```shell
+pipenv install python-dotenv
+```
+
+- 卸载某个包
+
+```shell
+pipenv uninstall python-dotenv
+```

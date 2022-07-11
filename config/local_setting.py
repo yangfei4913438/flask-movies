@@ -28,6 +28,8 @@ ASSETS_DEBUG = True
 
 # flask_debugtoolbar 需要的key(随机打一串字符)
 SECRET_KEY = 'dshabjdhsbahjdhwgqyw'
+# flask_debugtoolbar 允许删除cookie
+DEBUG_TB_INTERCEPT_REDIRECTS = False
 
 # 连接数据库配置
 SQLALCHEMY_DATABASE_URI = f"mysql://{username}:{password}@{host}:{port}/{database}"

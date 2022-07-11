@@ -2,9 +2,10 @@
 返回各种数据的示例
 """
 
-from flask import Blueprint, make_response, render_template, jsonify
-from model.user import User
+from flask import Blueprint, jsonify, make_response
 
+from model.user import User
+from utils.helper import auth_render
 
 # 实例化蓝图，参数：蓝图名称，导入名称
 custom_data = Blueprint('custom_data', __name__)
@@ -30,4 +31,4 @@ def user_info():
     users = User.query.all()
 
     # 渲染模板
-    return render_template('users.html', users=users)
+    return auth_render('users.html', users=users)

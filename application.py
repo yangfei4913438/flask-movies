@@ -9,9 +9,8 @@ from os import environ
 
 from flask import Flask
 from flask_assets import Bundle, Environment
+from flask_debugtoolbar import DebugToolbarExtension
 from flask_sqlalchemy import SQLAlchemy
-
-# from flask_debugtoolbar import DebugToolbarExtension
 
 # def exec_css():
 #     app.logger.info('start style monitor ...')
@@ -51,7 +50,7 @@ if env_key == 'dev':
     # 因 jinja 具有 cache ，所以也要設定重啟
     app.jinja_env.auto_reload = True
     # 开发环境启动调试工具
-    # DebugToolbarExtension(app)
+    DebugToolbarExtension(app)
 
 # 生成数据库变量
 db = SQLAlchemy(app)

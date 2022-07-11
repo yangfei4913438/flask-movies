@@ -41,8 +41,13 @@
 				<li class="active"><a href="{{ buildUrl('/#') }}">影视</a></li>
 			</ul>
 			<ul class="nav navbar-nav navbar-right">
-				<li><a href="{{ buildUrl('/register') }}">注册</a></li>
-				<li><a href="{{ buildUrl('/login') }}">登录</a></li>
+				{% if current_user %}
+					<li><a href="javascript:void(0);">{{ current_user.nickname }}</a></li>
+					<li><a href="{{ buildUrl('/logout') }}">退出</a></li>
+				{% else %}
+					<li><a href="{{ buildUrl('/register') }}">注册</a></li>
+					<li><a href="{{ buildUrl('/login') }}">登录</a></li>
+				{% endif %}
 			</ul>
 		</div>
 	</div>

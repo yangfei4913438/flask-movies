@@ -18,6 +18,7 @@
 	{# 加载 css #}
 	<link rel="stylesheet" href="{{ url_for('static',filename='src/css/bootstrap.min.css') }}">
 	<link rel="stylesheet" href="{{ url_for('static',filename='src/css/bootstrap-theme.min.css') }}">
+	<link rel="stylesheet" href="{{ url_for('static',filename='src/layui/css/layui.css') }}">
 </head>
 <body>
 
@@ -62,8 +63,9 @@
 
 {# 写在前面，模版里面就不用写继承了，因为jquery必须在最前面引入 #}
 <script type="text/javascript" src="{{ buildStaticUrl('/src/js/jquery-3.6.0.min.js') }}"></script>
-<script type="text/javascript" src="{{ buildStaticUrl('/src/js/jquery.validate.min.js') }}"></script>
 <script type="text/javascript" src="{{ buildStaticUrl('/src/js/bootstrap.min.js') }}"></script>
+<script type="text/javascript" src="{{ buildStaticUrl('/src/js/common.js') }}"></script>
+<script type="text/javascript" src="{{ buildStaticUrl('/src/layui/layui.js') }}"></script>
 
 {# 引入其他js #}
 {% block js %}

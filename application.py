@@ -8,6 +8,7 @@
 from os import environ
 
 from flask import Flask
+from flask_apscheduler import APScheduler
 from flask_assets import Bundle, Environment
 from flask_debugtoolbar import DebugToolbarExtension
 from flask_sqlalchemy import SQLAlchemy
@@ -54,3 +55,7 @@ if env_key == 'dev':
 
 # 生成数据库变量
 db = SQLAlchemy(app)
+
+# 初始化调度器
+scheduler = APScheduler()
+scheduler.init_app(app)

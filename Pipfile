@@ -13,6 +13,7 @@ pyscss = "*"
 flask-assets = "*"
 cssmin = "*"
 jsmin = "*"
+flask-apscheduler = "*"
 
 [dev-packages]
 

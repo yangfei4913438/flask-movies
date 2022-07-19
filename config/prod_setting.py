@@ -10,6 +10,13 @@ host = '127.0.0.1'
 port = '3306'
 database = 'mysql'
 
+# 生产服务器信息
+RUN_HOST = '127.0.0.1'
+RUN_PORT = 8080
+
+# 用于程序内部读取服务器信息
+DOMAIN = f"http://{RUN_HOST}:{RUN_PORT}"
+
 # 运行环境
 ENV = 'production'
 

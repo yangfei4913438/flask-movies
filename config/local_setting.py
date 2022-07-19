@@ -10,9 +10,11 @@ port = '3306'
 database = 'movie'
 
 # 开发服务器信息
-DEV_HOST = '127.0.0.1'
-DEV_PORT = 8080
-DOMAIN = f"http://{DEV_HOST}:{DEV_PORT}"
+RUN_HOST = '127.0.0.1'
+RUN_PORT = 8080
+
+# 用于程序内部读取服务器信息
+DOMAIN = f"http://{RUN_HOST}:{RUN_PORT}"
 
 # 當 flask 偵測到 template 有修改後，會自動去更新。
 TEMPLATED_AUTO_RELOAD = True
